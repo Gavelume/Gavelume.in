@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gavelume: Your Model UN Preparation Hub</title>
+<meta name="theme-color" content="#4a9eea"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Gavelume">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg2:#f2f8ff;--card:#fff;--tint:#e3f0fd;--accent:#4a9eea;--accent2:#2878c8;--ink:#0f2742;--mute:#5b7390;--line:#d6e6f7;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1726;--bg2:#10203a;--card:#13253f;--tint:#1a3558;--accent:#7bbcf5;--accent2:#9dd0fb;--ink:#eaf3fd;--mute:#9db4cd;--line:#244266}}
+:root[data-theme="dark"]{--bg:#0c1726;--bg2:#10203a;--card:#13253f;--tint:#1a3558;--accent:#7bbcf5;--accent2:#9dd0fb;--ink:#eaf3fd;--mute:#9db4cd;--line:#244266}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Plus Jakarta Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,6vw,3.8rem)}h2{font-size:clamp(1.7rem,4vw,2.4rem)}h3{font-size:1.15rem}
+a{color:var(--accent2);text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+section{padding:70px 0}.alt{background:var(--bg2)}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin-bottom:10px}
+.lead{color:var(--mute);font-size:1.08rem;max-width:640px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:19}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:Fraunces,serif;font-weight:700;font-size:1.2rem;color:var(--ink)}.logo span{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.92rem;font-weight:500}nav ul a{color:var(--mute)}
+@media(max-width:760px){nav ul{display:none}}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;background:var(--accent);color:#fff;border:0;cursor:pointer;font:inherit;font-weight:600}
+.btn:hover{background:var(--accent2)}.btn.ghost{background:transparent;color:var(--accent2);border:1.5px solid var(--accent)}.btn.sm{padding:8px 16px;font-size:.9rem}
+.hero{background:linear-gradient(180deg,var(--tint),var(--bg));padding:90px 0 60px;text-align:center}
+.hero .lead{margin:0 auto 26px}.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:32px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 6px 22px rgba(74,158,234,.07)}
+.ic{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:1.3rem;margin-bottom:12px}
+.card p{color:var(--mute);margin:0}
+.tools{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));margin-top:32px}
+.clock{font:700 3.2rem/1 Fraunces,serif;color:var(--accent2);text-align:center;margin:12px 0}.clock.low{color:#e0523c}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+input{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:9px 12px;min-width:0}
+input[type=number]{width:84px}input.grow{flex:1}
+ol.list{padding-left:20px;margin:12px 0 0}ol.list li{display:flex;justify-content:space-between;gap:8px;padding:4px 0}
+ol.list button{background:none;border:0;color:var(--mute);cursor:pointer;font-size:1rem}
+.res{margin-top:14px;padding:14px;border-radius:14px;background:var(--tint);font-weight:600}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 16px}
+.tab{padding:9px 18px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);color:var(--mute);font:inherit;font-weight:600;cursor:pointer}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.pane{display:none}.pane.on{display:block}
+.steps{display:grid;gap:12px}
+.step{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 20px}
+.step b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center}
+.step p{margin:2px 0 0;color:var(--mute)}.step h3{margin:0 0 2px;font-size:1.05rem}
+.gl{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));margin-top:28px}
+.gl div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px}.gl b{color:var(--accent2)}.gl p{margin:4px 0 0;color:var(--mute);font-size:.95rem}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:12px}
+summary{cursor:pointer;font-weight:600}details p{color:var(--mute);margin:10px 0 0}
+.note{background:var(--tint);border-left:5px solid var(--accent);border-radius:14px;padding:20px 24px;margin-top:26px}
+.price{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:32px}
+.plan{display:flex;flex-direction:column;position:relative}.plan .amt{font:700 2.1rem/1.1 Fraunces,serif;color:var(--accent2);margin:8px 0}.plan .amt small{font:500 .85rem 'Plus Jakarta Sans',sans-serif;color:var(--mute)}
+.plan ul{padding-left:18px;color:var(--mute);margin:8px 0 18px;flex:1;font-size:.95rem}.plan li{margin:5px 0}
+.plan.pop{border:2px solid var(--accent)}.badge{position:absolute;top:-12px;right:18px;background:var(--accent);color:#fff;font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:99px}
+dialog{border:1px solid var(--line);border-radius:22px;background:var(--card);color:var(--ink);padding:26px;width:min(420px,92vw);max-height:90vh;overflow:auto}
+dialog::backdrop{background:rgba(15,39,66,.45)}dialog label{display:block;font-weight:600;font-size:.9rem;margin-top:12px}dialog input{width:100%;margin-top:4px}
+.sum{background:var(--tint);border-radius:14px;padding:12px 16px;margin:10px 0;display:flex;justify-content:space-between;font-weight:600}
+#pm{margin-top:12px;font-size:.9rem;color:var(--mute)}.sec{font-size:.82rem;color:var(--mute);text-align:center;margin-top:22px}
+footer{padding:34px 0;border-top:1px solid var(--line);color:var(--mute);font-size:.88rem;text-align:center}
+/* ---- refined look ---- */
+.logo::before{content:'✦';color:var(--accent);margin-right:6px}
+.eyebrow{display:inline-block;background:var(--tint);padding:5px 14px;border-radius:99px;letter-spacing:.12em}
+h2{letter-spacing:-.01em}h2::after{content:'';display:block;width:54px;height:4px;border-radius:4px;margin-top:14px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.hero h2::after,.cta h2::after{margin-inline:auto}
+.btn{background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 8px 20px color-mix(in srgb,var(--accent) 35%,transparent);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px color-mix(in srgb,var(--accent) 45%,transparent)}
+.btn.ghost{background:transparent;box-shadow:none}
+.hero{position:relative;overflow:hidden;padding:110px 0 80px;background:radial-gradient(55% 70% at 12% 0,color-mix(in srgb,var(--accent) 30%,transparent),transparent 65%),radial-gradient(45% 60% at 95% 30%,color-mix(in srgb,var(--accent2) 18%,transparent),transparent 65%),linear-gradient(180deg,var(--tint),var(--bg))}
+.hero::before{content:'';position:absolute;width:680px;height:680px;right:-200px;top:-150px;opacity:.55;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cline x1='166.0' y1='100.0' x2='196.0' y2='100.0' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='165.0' y1='111.5' x2='182.7' y2='114.6' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='162.0' y1='122.6' x2='190.2' y2='132.8' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='157.2' y1='133.0' x2='172.7' y2='142.0' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='150.6' y1='142.4' x2='173.5' y2='161.7' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='142.4' y1='150.6' x2='154.0' y2='164.3' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='133.0' y1='157.2' x2='148.0' y2='183.1' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='122.6' y1='162.0' x2='128.7' y2='178.9' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='111.5' y1='165.0' x2='116.7' y2='194.5' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='100.0' y1='166.0' x2='100.0' y2='184.0' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='88.5' y1='165.0' x2='83.3' y2='194.5' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='77.4' y1='162.0' x2='71.3' y2='178.9' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='67.0' y1='157.2' x2='52.0' y2='183.1' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='57.6' y1='150.6' x2='46.0' y2='164.3' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='49.4' y1='142.4' x2='26.5' y2='161.7' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='42.8' y1='133.0' x2='27.3' y2='142.0' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='38.0' y1='122.6' x2='9.8' y2='132.8' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='35.0' y1='111.5' x2='17.3' y2='114.6' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='34.0' y1='100.0' x2='4.0' y2='100.0' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='35.0' y1='88.5' x2='17.3' y2='85.4' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='38.0' y1='77.4' x2='9.8' y2='67.2' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='42.8' y1='67.0' x2='27.3' y2='58.0' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='49.4' y1='57.6' x2='26.5' y2='38.3' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='57.6' y1='49.4' x2='46.0' y2='35.7' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='67.0' y1='42.8' x2='52.0' y2='16.9' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='77.4' y1='38.0' x2='71.3' y2='21.1' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='88.5' y1='35.0' x2='83.3' y2='5.5' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='100.0' y1='34.0' x2='100.0' y2='16.0' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='111.5' y1='35.0' x2='116.7' y2='5.5' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='122.6' y1='38.0' x2='128.7' y2='21.1' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='133.0' y1='42.8' x2='148.0' y2='16.9' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='142.4' y1='49.4' x2='154.0' y2='35.7' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='150.6' y1='57.6' x2='173.5' y2='38.3' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='157.2' y1='67.0' x2='172.7' y2='58.0' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='162.0' y1='77.4' x2='190.2' y2='67.2' stroke='%234a9eea' stroke-width='1.2' stroke-linecap='round' stroke-opacity='.7'/%3E%3Cline x1='165.0' y1='88.5' x2='182.7' y2='85.4' stroke='%234a9eea' stroke-width='0.7' stroke-linecap='round' stroke-opacity='.7'/%3E%3Ccircle cx='100' cy='100' r='60' fill='none' stroke='%234a9eea' stroke-width='.5' stroke-dasharray='1.5 3'/%3E%3Ccircle cx='100' cy='100' r='50' fill='%234a9eea' fill-opacity='.2' stroke='%234a9eea' stroke-width='.9'/%3E%3Cellipse cx='100' cy='100' rx='18' ry='50' fill='none' stroke='%234a9eea' stroke-width='.7'/%3E%3Cellipse cx='100' cy='100' rx='36' ry='50' fill='none' stroke='%234a9eea' stroke-width='.7'/%3E%3Cline x1='100' y1='50' x2='100' y2='150' stroke='%234a9eea' stroke-width='.7'/%3E%3Cline x1='60.0' y1='70' x2='140.0' y2='70' stroke='%234a9eea' stroke-width='.7'/%3E%3Cline x1='50.0' y1='100' x2='150.0' y2='100' stroke='%234a9eea' stroke-width='.7'/%3E%3Cline x1='60.0' y1='130' x2='140.0' y2='130' stroke='%234a9eea' stroke-width='.7'/%3E%3Cpath d='M72 66L74 72L80 74L74 76L72 82L70 76L64 74L70 72Z' fill='%234a9eea' fill-opacity='.7'/%3E%3C/svg%3E") center/contain no-repeat;animation:spin 120s linear infinite}
+.hero::after{content:'';position:absolute;width:420px;height:420px;left:-140px;bottom:-200px;opacity:.35;background:inherit;background:radial-gradient(circle,var(--accent),transparent 70%);filter:blur(40px)}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.5rem,7vw,4.6rem);letter-spacing:-.02em}
+.hero h1 em{font-style:italic;background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.pills span{padding:8px 18px;border-radius:99px;font-size:.88rem;font-weight:600;color:var(--accent2);background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(8px);border:1px solid var(--line)}
+.ribbon{overflow:hidden;background:var(--card);border-block:1px solid var(--line);padding:16px 0}
+.ribbon div{display:flex;gap:46px;width:max-content;animation:mq 38s linear infinite}
+.ribbon span{font:600 1rem Fraunces,serif;color:var(--accent2);white-space:nowrap}.ribbon span::after{content:'✦';margin-left:46px;color:var(--accent);opacity:.6}
+.alt{background:radial-gradient(color-mix(in srgb,var(--accent) 16%,transparent) 1px,transparent 1px) 0 0/24px 24px,linear-gradient(180deg,var(--bg2),var(--bg))}
+.card{border-radius:26px;background:linear-gradient(180deg,var(--card),color-mix(in srgb,var(--tint) 40%,var(--card)))}
+.ic{width:54px;height:54px;border-radius:18px;font-size:1.5rem;background:linear-gradient(135deg,var(--tint),color-mix(in srgb,var(--accent) 35%,var(--tint)));box-shadow:0 6px 14px color-mix(in srgb,var(--accent) 22%,transparent)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+.card,.step,.gl div{transition:transform .3s,box-shadow .3s,opacity .7s}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 44px color-mix(in srgb,var(--accent) 24%,transparent)}
+.step{border-left:4px solid var(--accent)}.step b{background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.clock{width:196px;height:196px;border-radius:50%;display:grid;place-items:center;margin:16px auto;font-size:2.7rem;border:8px solid var(--tint);box-shadow:inset 0 0 0 2px var(--accent),0 0 44px color-mix(in srgb,var(--accent) 30%,transparent)}
+.plan.pop{background:linear-gradient(180deg,color-mix(in srgb,var(--tint) 70%,var(--card)),var(--card));box-shadow:0 18px 44px color-mix(in srgb,var(--accent) 28%,transparent)}
+.badge{background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.cta,.note{border-radius:26px}
+footer{background:linear-gradient(180deg,var(--bg),var(--tint))}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn:not(.ghost),:root:not([data-theme="light"]) .tab.on,:root:not([data-theme="light"]) .badge,:root:not([data-theme="light"]) .step b{color:#06213f}}
+:root[data-theme="dark"] .btn:not(.ghost),:root[data-theme="dark"] .tab.on,:root[data-theme="dark"] .badge,:root[data-theme="dark"] .step b{color:#06213f}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.perks{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:26px}.perks div{background:var(--tint);border-radius:16px;padding:14px 18px}.perks b{display:block;color:var(--accent2)}.perks span{font-size:.9rem;color:var(--mute)}
+.meth{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}.meth span{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:99px;border:1px solid var(--line);color:var(--mute)}
+.tabbar{display:none}
+@media(max-width:760px){.tabbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px))}.tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;font-size:1.25rem;line-height:1.25;color:var(--mute);text-decoration:none}.tabbar span{font-size:.68rem;font-weight:600}body{padding-bottom:72px}}
+.upi{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:var(--tint);border-radius:18px;padding:16px 20px;margin-top:22px}.upi[hidden]{display:none}.upi code{font-weight:700;color:var(--accent2)}
+.promo{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;text-align:center;padding:9px 14px;font-size:.88rem;font-weight:600}
+#quiz h2::after{margin-inline:auto}.quiz{max-width:680px;margin:30px auto 0}.qq{font:600 1.3rem Fraunces,serif;margin-bottom:16px}.opts{display:grid;gap:10px}
+.opt{text-align:left;padding:14px 18px;border-radius:16px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:inherit;cursor:pointer;transition:.2s}.opt:hover{border-color:var(--accent);background:var(--tint);transform:translateX(4px)}
+.qp{height:6px;border-radius:6px;background:var(--tint);margin-bottom:18px;overflow:hidden}.qp i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .4s}.qr h3{font-size:1.7rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .promo{color:#06213f}}:root[data-theme="dark"] .promo{color:#06213f}
+/* ---- light blue and white ---- */
+:root:root:not([data-theme="dark"]){--bg:#fff;--bg2:#f2f8ff;--card:#fff;--tint:#e3f0fd;--accent:#4a9eea;--accent2:#2878c8;--ink:#0f2742;--mute:#5b7390;--line:#d6e6f7;color-scheme:light}
+:root:root:not([data-theme="dark"]) .btn:not(.ghost),:root:root:not([data-theme="dark"]) .tab.on,:root:root:not([data-theme="dark"]) .badge,:root:root:not([data-theme="dark"]) .step b,:root:root:not([data-theme="dark"]) .promo{color:#fff}
+.tg{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);cursor:pointer;font-size:1.1rem;line-height:1}
+nav,.tabbar,.pills span{-webkit-backdrop-filter:blur(10px)}
+@supports not (background:color-mix(in srgb,red,blue)){nav,.tabbar{background:var(--bg)}.card{background:var(--card)}.ic{background:var(--tint)}.hero{background:var(--tint)}.btn:not(.ghost){background:var(--accent)}.plan.pop{background:var(--tint)}.pills span{background:var(--card)}}
+
+/* ---- clickable feature cards and rules reference ---- */
+a.fc{display:block;color:inherit;text-decoration:none;cursor:pointer}a.fc h3{color:var(--ink)}
+.fc .go{display:inline-block;margin-top:14px;font-weight:700;font-size:.88rem;color:var(--accent2)}.fc:hover .go{text-decoration:underline}
+.rtools{display:flex;gap:12px;align-items:center;margin-top:24px;flex-wrap:wrap}.rtools input{max-width:420px}.rcount{color:var(--mute);font-size:.88rem}
+.rtabs{margin:16px 0}
+.rg{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
+.ri{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;border-top:4px solid var(--accent)}
+.ri h3{margin:0 0 4px;font-size:1.05rem}.ri p{margin:6px 0 0;color:var(--mute);font-size:.95rem}
+.ri .ex{font-style:italic;color:var(--ink);background:var(--tint);border-radius:10px;padding:8px 12px;margin-top:10px;font-size:.9rem}
+.ri .ex b{font-style:normal;color:var(--accent2)}
+.ri .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--tint);color:var(--accent2);margin:0 6px 4px 0}
+.rno{grid-column:1/-1;text-align:center;color:var(--mute);padding:26px}
+.tw{overflow-x:auto;margin-top:14px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.vt{width:100%;border-collapse:collapse;font-size:.93rem;min-width:520px}.vt th,.vt td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}.vt th{background:var(--tint);color:var(--accent2)}.vt tr:last-child td{border-bottom:0}.vt td:nth-child(3){color:var(--mute)}
+input[type=search]{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:10px 14px;min-width:0;width:100%}
+.tabbar a span{white-space:nowrap}
+
+/* ---- feature dialog + AI drafter ---- */
+#fd{width:min(820px,94vw);padding:30px 28px;position:relative}.fdx{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:1rem}
+#fd h2{padding-right:44px}#fd h3.sub{margin:26px 0 10px}#fd .steps{margin-top:14px}
+#fd ul.ck{padding-left:20px;color:var(--mute);margin:0}#fd ul.ck li{margin:6px 0}
+#fd .tpl{white-space:pre-wrap;background:var(--tint);border-radius:14px;padding:16px 18px;font-size:.92rem;margin:0}
+#fd .row{margin-top:20px}
+.aib{max-width:820px;margin:30px auto 0;padding:26px}.aib:hover{transform:none}.aity{margin:0 0 14px}
+textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;resize:vertical}
+.exb{font:inherit;font-size:.82rem;padding:6px 12px;border-radius:99px;border:1px dashed var(--accent);background:transparent;color:var(--accent2);cursor:pointer;text-align:left}.exb:hover{background:var(--tint)}
+.aiout{white-space:pre-wrap;background:var(--tint);border-radius:16px;padding:18px 20px;margin-top:16px;font-size:.95rem;line-height:1.7;max-height:560px;overflow:auto}
+.aitag{margin-top:14px;font-size:.85rem;color:var(--mute)}
+
+/* ---- real committee members ---- */
+select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:9px 12px;min-width:0;max-width:100%}
+.cmc .row{margin-top:14px;align-items:center}.cmi{margin-top:14px;padding:12px 16px;border-radius:14px;background:var(--tint);font-weight:600;font-size:.93rem}
+.cg{margin:22px 0 10px;font:700 1rem Fraunces,serif;color:var(--accent2)}.cg span{font:500 .85rem 'Plus Jakarta Sans',sans-serif;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:.88rem;font-weight:600;padding:6px 14px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;transition:.15s}
+.chip:hover{border-color:var(--accent);background:var(--tint)}.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.chip i{font-style:normal;font-size:.68rem;font-weight:700;margin-left:6px;padding:2px 7px;border-radius:99px;background:var(--tint);color:var(--accent2)}.chip.on i{background:rgba(255,255,255,.25);color:inherit}
+.cmn{font-size:.82rem;color:var(--mute);margin-top:18px!important}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip.on{color:#06213f}}:root[data-theme="dark"] .chip.on{color:#06213f}
+
+/* ---- AI usage limit ---- */
+.aicnt{margin-top:14px;font-size:.85rem;font-weight:600;color:var(--accent2)}
+.aipw{margin-top:16px;padding:20px 22px;border-radius:18px;border:2px solid var(--accent);background:linear-gradient(180deg,var(--tint),var(--card))}.aipw[hidden]{display:none}.aipw h3{margin:0 0 6px}.aipw p{margin:0;color:var(--mute)}
+.cgo{margin-top:22px}.cgo summary{font-weight:700;color:var(--accent2)}.chip.out{border-style:dashed}
+</style>
+</head>
+<body>
+<div class="promo">🎓 Students save 10% with code <b>STUDENT10</b> · Expert feedback from just ₹99</div>
+<nav><div class="wrap"><a class="logo" href="#top">Gavel<span>ume</span></a>
+<ul><li><a href="#features">Features</a></li><li><a href="#tools">Committee tools</a></li><li><a href="#guides">Guides</a></li><li><a href="#ai">AI Drafter</a></li><li><a href="#guides" data-tab="p5">Rules</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul>
+<div style="display:flex;gap:10px;align-items:center"><button class="tg" id="tg" aria-label="Switch between light and dark mode">🌙</button><a class="btn sm" href="#tools">Try the tools</a></div></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div class="eyebrow">Prepare. Speak. Win the room.</div>
+<h1>Find your <em>direction</em><br>in every committee.</h1>
+<p class="lead">Walk in prepared, speak with confidence and own the committee. Free guides, live committee tools and fast written feedback, all made for student delegates.</p>
+<div class="btns"><a class="btn" href="#quiz">Find my delegate style</a><a class="btn ghost" href="#tools">Open committee tools</a></div>
+<div class="pills"><span>✦ Free committee tools</span><span>✦ Expert paper feedback</span><span>✦ Built for delegates</span></div></div></header>
+<div class="ribbon"><div><span>UN Security Council</span><span>General Assembly</span><span>Human Rights Council</span><span>World Health Organization</span><span>ECOSOC</span><span>DISEC</span><span>UNEP</span><span>Crisis Committee</span><span>Historical Committee</span><span>Lok Sabha</span><span>UN Security Council</span><span>General Assembly</span><span>Human Rights Council</span><span>World Health Organization</span><span>ECOSOC</span><span>DISEC</span><span>UNEP</span><span>Crisis Committee</span><span>Historical Committee</span><span>Lok Sabha</span></div></div>
+
+<section id="features"><div class="wrap">
+<div class="eyebrow">What’s inside</div><h2>Built around how delegates actually prepare</h2>
+<div class="grid">
+<a class="card fc" href="#features" data-f="research"><div class="ic">🔎</div><h3>Research</h3><p>A repeatable method for understanding your country, topic and the history of UN action.</p><span class="go">See everything →</span></a>
+<a class="card fc" href="#features" data-f="paper"><div class="ic">📝</div><h3>Position papers</h3><p>A section-by-section structure with word budgets and common mistakes to avoid.</p><span class="go">See everything →</span></a>
+<a class="card fc" href="#features" data-f="speech"><div class="ic">🎤</div><h3>Speeches</h3><p>Frameworks for opening statements, GSL speeches and moderated caucus interventions.</p><span class="go">See everything →</span></a>
+<a class="card fc" href="#features" data-f="resolution"><div class="ic">📜</div><h3>Resolutions</h3><p>How to draft preambulatory and operative clauses that bring blocs together.</p><span class="go">See everything →</span></a>
+<a class="card fc" href="#features" data-f="rules"><div class="ic">⚖️</div><h3>Rules of procedure</h3><p>A quick glossary of motions, points and voting thresholds.</p><span class="go">See everything →</span></a>
+<a class="card fc" href="#features" data-f="tools"><div class="ic">⏱️</div><h3>Live tools</h3><p>A speaking timer, speakers list and voting calculator that work right here.</p><span class="go">See everything →</span></a>
+</div></div></section>
+
+<section class="alt" id="tools"><div class="wrap">
+<div class="eyebrow">Committee tools</div><h2>Run your committee, live</h2>
+<p class="lead">No sign-up needed. Everything works in your browser.</p>
+<div class="tools">
+<div class="card"><h3>Speaking timer</h3>
+<div class="clock" id="clk">01:00</div>
+<div class="row"><input type="number" id="mins" value="1" min="0" max="30" aria-label="Minutes"><input type="number" id="secs" value="0" min="0" max="59" aria-label="Seconds"><button class="btn sm" id="set">Set</button></div>
+<div class="row"><button class="btn sm" id="go">Start</button><button class="btn sm ghost" id="pause">Pause</button><button class="btn sm ghost" id="reset">Reset</button></div></div>
+
+<div class="card"><h3>Speakers list</h3>
+<div class="row"><input class="grow" id="sp" placeholder="Country name"><button class="btn sm" id="add">Add</button></div>
+<ol class="list" id="spl"></ol><p id="spe">No speakers yet.</p></div>
+
+<div class="card"><h3>Voting calculator</h3>
+<div class="row"><input type="number" id="y" min="0" placeholder="Yes"><input type="number" id="n" min="0" placeholder="No"><input type="number" id="a" min="0" placeholder="Abstain"></div>
+<div class="row"><button class="btn sm" id="calc">Calculate</button></div>
+<div class="res" id="out">Enter votes to see the result.</div></div>
+
+<div class="card cmc" style="grid-column:1/-1"><h3>Real committee members</h3>
+<p>Pick a committee to see which countries actually sit on it. Tap a country to add it to your speakers list. Countries that aren’t real members can be added too.</p>
+<div class="row"><select id="cm" aria-label="Choose a committee"></select><input class="grow" id="cmq" type="search" placeholder="Search a country…" aria-label="Search countries"></div>
+<div class="cmi" id="cmi"></div>
+<div class="row"><button class="btn sm" id="cma">Add all members to speakers list</button><button class="btn sm ghost" id="cmx">Clear speakers list</button></div>
+<div id="cml"></div>
+<p class="cmn" id="cmn"></p></div>
+</div></div></section>
+
+<section id="guides"><div class="wrap">
+<div class="eyebrow">Guides</div><h2>Prepare with a clear structure</h2>
+<div class="tabs" role="tablist">
+<button class="tab on" data-p="p1">Research</button><button class="tab" data-p="p2">Position paper</button><button class="tab" data-p="p3">Speeches</button><button class="tab" data-p="p4">Resolutions</button><button class="tab" data-p="p5">Rules of procedure</button></div>
+
+<div class="pane on" id="p1"><div class="steps">
+<div class="step"><b>1</b><div><h3>Understand the topic</h3><p>Read the background guide fully, then define key terms and the core disagreement.</p></div></div>
+<div class="step"><b>2</b><div><h3>Study your country</h3><p>Note its government, economy, alliances and interests as they relate to the agenda.</p></div></div>
+<div class="step"><b>3</b><div><h3>Trace past UN action</h3><p>Find relevant resolutions, treaties and votes, and how your country voted.</p></div></div>
+<div class="step"><b>4</b><div><h3>Map the blocs</h3><p>List likely allies, opponents and swing states, and what each wants.</p></div></div>
+<div class="step"><b>5</b><div><h3>Record your sources</h3><p>Keep a note of every document and statistic so you can cite it in committee.</p></div></div></div></div>
+
+<div class="pane" id="p2"><div class="steps">
+<div class="step"><b>1</b><div><h3>Topic background (about 100 words)</h3><p>Show you understand the issue and why it matters internationally.</p></div></div>
+<div class="step"><b>2</b><div><h3>Past actions by your country (about 150 words)</h3><p>Cite treaties, votes and statements that show a consistent position.</p></div></div>
+<div class="step"><b>3</b><div><h3>Your country’s policy (about 150 words)</h3><p>State what your country wants and the reasoning behind it.</p></div></div>
+<div class="step"><b>4</b><div><h3>Proposed solutions (about 150 words)</h3><p>Offer specific, realistic actions the committee could adopt.</p></div></div></div>
+<div class="note">Write in your country’s voice, stay specific and avoid claims you cannot source.</div></div>
+
+<div class="pane" id="p3"><div class="steps">
+<div class="step"><b>1</b><div><h3>Hook</h3><p>Open with one striking fact or question that frames your position.</p></div></div>
+<div class="step"><b>2</b><div><h3>Position</h3><p>Say clearly what your country believes and why, in one or two sentences.</p></div></div>
+<div class="step"><b>3</b><div><h3>Proposal</h3><p>Name one concrete solution and invite others to collaborate.</p></div></div>
+<div class="step"><b>4</b><div><h3>Close</h3><p>End with a call to action. Always finish inside your time.</p></div></div></div></div>
+
+<div class="pane" id="p4"><div class="steps">
+<div class="step"><b>1</b><div><h3>Heading and sponsors</h3><p>Committee, topic, sponsors and signatories.</p></div></div>
+<div class="step"><b>2</b><div><h3>Preambulatory clauses</h3><p>Set context using phrases such as “Recalling”, “Noting” and “Deeply concerned”. End each with a comma.</p></div></div>
+<div class="step"><b>3</b><div><h3>Operative clauses</h3><p>Start with an action verb such as “Urges” or “Calls upon”. Number each clause and end it with a semicolon.</p></div></div>
+<div class="step"><b>4</b><div><h3>Build consensus</h3><p>Combine ideas across blocs so your draft attracts signatories and votes.</p></div></div></div></div>
+
+<div class="pane" id="p5"><p class="lead">Rules vary by conference, so always check your own rules. These are the most common terms, grouped so you can find them fast.</p>
+<div class="rtools"><input class="grow" id="rq" type="search" placeholder="Search a motion, point or term…" aria-label="Search rules of procedure"><span id="rc" class="rcount"></span></div>
+<div class="tabs rtabs" id="rtabs" role="tablist"></div>
+<div class="rg" id="rg"></div>
+<h3 style="margin-top:42px">Voting thresholds at a glance</h3>
+<div class="tw"><table class="vt"><thead><tr><th>Decision</th><th>Usually needs</th><th>Note</th></tr></thead><tbody>
+<tr><td>Set agenda, open or close speakers’ list</td><td>Simple majority</td><td>More than half of members present and voting</td></tr>
+<tr><td>Moderated or unmoderated caucus</td><td>Simple majority</td><td>Chair may rule a motion out of order or take the most disruptive first</td></tr>
+<tr><td>Extend a caucus</td><td>Simple majority</td><td>Often allowed once, up to the original length</td></tr>
+<tr><td>Close debate</td><td>Two-thirds majority</td><td>Often after two speakers against the motion</td></tr>
+<tr><td>Reconsider or table</td><td>Two-thirds majority</td><td>Check your rules for who may speak</td></tr>
+<tr><td>Amendments and draft resolutions</td><td>Simple majority</td><td>Friendly amendments need no vote</td></tr>
+<tr><td>Security Council substantive vote</td><td>9 of 15 and no P5 veto</td><td>US, UK, France, Russia and China hold the veto</td></tr>
+</tbody></table></div>
+<div class="note"><b>Tip:</b> Procedure is a tool. A well-timed motion can give your bloc time to negotiate or end a debate that is going against you.</div></div>
+</div></section>
+
+<section id="ai"><div class="wrap">
+<div class="eyebrow">✨ Gavelume AI Drafter</div><h2>One prompt. One full draft.</h2>
+<p class="lead">Tell it what you need, with your country, topic and committee. It builds a structured first draft you can edit.</p>
+<div class="card aib">
+<div class="tabs aity" id="aity"><button class="tab on" data-t="auto">Auto-detect</button><button class="tab" data-t="paper">Position paper</button><button class="tab" data-t="speech">Speech</button><button class="tab" data-t="resolution">Resolution</button><button class="tab" data-t="poi">Rebuttal &amp; POIs</button><button class="tab" data-t="research">Research plan</button></div>
+<textarea id="aiq" rows="3" placeholder="e.g. Write a position paper for India on climate finance at the UN General Assembly"></textarea>
+<div class="row exs" id="aiex"><button class="exb">Position paper for Brazil on water security, WHO</button><button class="exb">90 second opening speech as Japan on cyber warfare, DISEC</button><button class="exb">Draft resolution on refugee education, UNHCR</button></div>
+<div class="row"><button class="btn" id="aig">Generate draft</button><button class="btn ghost" id="aic" hidden>Copy</button><button class="btn ghost" id="aid" hidden>Download .txt</button></div>
+<div class="aicnt" id="aicnt"></div>
+<div class="aipw" id="aipw" hidden><h3 id="aiwh">You’ve used your 10 free AI messages</h3><p id="aiwp">Get a plan for 400 AI messages every month. After you pay, you’ll receive an unlock code. Already have one? Enter it below.</p>
+<div class="row" id="aiwb"><button class="btn" id="aibuy">Monthly · ₹199</button><button class="btn" id="aibuy2">Yearly · ₹1,499 (save ₹889)</button></div>
+<div class="row"><input class="grow" id="aicode" placeholder="Unlock code, e.g. GVM-XXXX-XXXX-XXXX" aria-label="Unlock code"><button class="btn sm ghost" id="aiun">Unlock</button></div><div id="aium" class="aitag"></div></div>
+<div id="ait" class="aitag" hidden></div><div id="aio" class="aiout" hidden></div>
+</div></div></section>
+<dialog id="fd"><button class="fdx" id="fdc" aria-label="Close">✕</button><div id="fdb"></div></dialog>
+
+<section class="alt" id="quiz"><div class="wrap" style="text-align:center"><div class="eyebrow">30-second quiz</div><h2>What kind of delegate are you?</h2><p class="lead" style="margin:0 auto">Answer three quick questions and get a prep plan that fits you.</p><div class="card quiz" id="qz" style="text-align:left"></div></div></section>
+<section id="pricing"><div class="wrap">
+<div class="eyebrow">Services & pricing</div><h2>Free to learn. Pay only for personal help.</h2>
+<p class="lead">The guides and committee tools stay free. Book a service when you want an expert’s eyes on your work.</p>
+<div class="perks"><div><b>UPI-first</b><span>Pay with GPay, PhonePe, Paytm, cards or net banking.</span></div><div><b>Student code</b><span>Use STUDENT10 at checkout for 10% off.</span></div><div><b>Parent can pay</b><span>Send the order to a parent on WhatsApp in one tap.</span></div><div><b>No account needed</b><span>Just your name and email.</span></div></div>
+<div class="price">
+<div class="card plan"><h3>Free Toolkit</h3><div class="amt">₹0</div><ul><li>All guides and templates</li><li>Timer, speakers list, vote calculator</li><li>Rules of procedure glossary</li><li>10 free AI messages</li></ul><a class="btn ghost" href="#tools" style="text-align:center">Use for free</a></div>
+<div class="card plan"><h3>Quick Speech Check</h3><div class="amt">₹99</div><ul><li>Written notes on your opening speech</li><li>Hook, structure and timing tips</li><li>Returned within 24 hours</li></ul><button class="btn buy" data-s="quick">Get speech check</button></div>
+<div class="card plan pop"><span class="badge">Most popular</span><h3>Position Paper Review</h3><div class="amt">₹499</div><ul><li>Line-by-line written feedback</li><li>Structure and sourcing check</li><li>Returned within 48 hours</li></ul><button class="btn buy" data-s="paper">Buy now</button></div>
+
+<div class="card plan"><h3>Rebuttal &amp; POI Pack</h3><div class="amt">₹199</div><ul><li>10 likely questions on your topic</li><li>Model answers and counter-arguments</li><li>Delivered within 48 hours</li></ul><button class="btn buy" data-s="poi">Get the pack</button></div>
+<div class="card plan"><h3>Resolution Review</h3><div class="amt">₹299</div><ul><li>Clause-by-clause feedback</li><li>Fixes for wording and structure</li><li>Tips to win sponsors and signatories</li></ul><button class="btn buy" data-s="resolution">Get my review</button></div>
+<div class="card plan"><h3>Country Research Brief</h3><div class="amt">₹399</div><ul><li>Your country’s position and past votes</li><li>Likely allies and opponents</li><li>Sources you can cite in committee</li></ul><button class="btn buy" data-s="brief">Get my brief</button></div>
+<div class="card plan"><h3>Speech + Paper Bundle</h3><div class="amt">₹549</div><ul><li>Quick Speech Check + Paper Review</li><li>Feedback on both your speech and your paper</li><li>Save ₹49 vs buying separately</li></ul><button class="btn buy" data-s="bundle">Get bundle</button></div>
+<div class="card plan pop"><span class="badge">Best value</span><h3>Full Prep Package</h3><div class="amt">₹1,199</div><ul><li>Country brief, paper review and resolution review</li><li>Speech check and Rebuttal &amp; POI Pack</li><li>Save ₹296 vs buying separately</li></ul><button class="btn buy" data-s="full">Get the package</button></div>
+<div class="card plan"><h3>AI Monthly Plan</h3><div class="amt">₹199<small>/month</small></div><ul><li>400 AI messages every month</li><li>Position papers, speeches, resolutions and more</li><li>Unlock code sent after payment</li></ul><button class="btn buy" data-s="aim">Get monthly plan</button></div>
+<div class="card plan pop"><span class="badge">Save ₹889</span><h3>AI Yearly Plan</h3><div class="amt">₹1,499<small>/year</small></div><ul><li>400 AI messages every month for 12 months</li><li>Works out to about ₹125 a month</li><li>Unlock code sent after payment</li></ul><button class="btn buy" data-s="aiy">Get yearly plan</button></div>
+
+</div>
+<p class="sec">🔒 Payments are handled on a secure checkout page. We never store card or UPI details.</p>
+</div></section>
+<section id="payment" style="padding-top:10px"><div class="wrap">
+<div class="eyebrow">Payment details</div><h2>Simple, safe and student-friendly</h2>
+<div class="grid">
+<div class="card"><div class="ic">💳</div><h3>Accepted methods</h3><p>UPI (GPay, PhonePe, Paytm), debit and credit cards, and net banking. All prices are in Indian rupees (₹).</p></div>
+<div class="card"><div class="ic">🧾</div><h3>How it works</h3><p>Pick a service, enter your name and email, then pay by UPI. Keep your transaction ID, and your order is confirmed by email once the payment is received.</p></div>
+<div class="card"><div class="ic">⏱️</div><h3>Delivery times</h3><p>Speech checks come back within 24 hours, papers, resolutions and POI packs within 48 hours, research briefs within 3 days, and AI plan unlock codes once your payment is confirmed.</p></div>
+<div class="card"><div class="ic">↩️</div><h3>Refunds</h3><p>Full refund if your service hasn’t started. After that, we handle refunds case by case.</p></div>
+<div class="card"><div class="ic">🎓</div><h3>Student savings</h3><p>Use code STUDENT10 for 10% off, or ask a parent to pay with one tap on WhatsApp.</p></div>
+<div class="card"><div class="ic">🔒</div><h3>Your data</h3><p>We never see or store your card or UPI details. Payments are handled by the payment provider.</p></div>
+</div>
+<div class="upi" id="upibox" hidden><div>Pay by UPI to <code id="upiid"></code> <span id="upin"></span></div><button class="btn sm ghost" id="cpy">Copy UPI ID</button></div>
+<p class="sec" id="sup" hidden></p>
+</div></section>
+<dialog id="dlg"><h3>Complete your order</h3>
+<div class="sum"><span id="sn"></span><span id="sp2"></span></div>
+<div class="meth"><span>UPI</span><span>GPay</span><span>PhonePe</span><span>Paytm</span><span>Cards</span><span>Net banking</span></div>
+<label for="pc">Student code (optional)</label>
+<div class="row"><input class="grow" id="pc" placeholder="Try STUDENT10"><button class="btn sm ghost" id="ap">Apply</button></div>
+<label for="cn">Full name</label><input id="cn" autocomplete="name">
+<label for="ce">Email</label><input id="ce" type="email" autocomplete="email">
+<div class="row" style="margin-top:18px"><button class="btn" id="pay">Pay now</button><button class="btn ghost" id="cx">Cancel</button></div>
+<button class="btn ghost" id="par" style="width:100%;margin-top:10px">👪 Ask a parent to pay (WhatsApp)</button>
+<div id="pm"></div></dialog>
+
+<section id="faq"><div class="wrap">
+<div class="eyebrow">Questions</div><h2>FAQ</h2>
+<details><summary>I’m a first-timer. Where do I start?</summary><p>Read your background guide, research your country, and write a short opening speech. Then use the timer to practise.</p></details>
+<details><summary>How long should a position paper be?</summary><p>Most conferences ask for one page. Check your own conference’s guidelines.</p></details>
+<details><summary>What majority do votes need?</summary><p>Procedural votes usually need a simple majority, while substantive votes depend on your committee’s rules. Use the calculator for both.</p></details>
+<details><summary>How do payments work?</summary><p>Choose a service, enter your name and email, and you’ll be taken to a secure checkout page to pay by UPI, card or net banking. You’ll get a confirmation email afterwards.</p></details>
+<details><summary>Can I get a refund?</summary><p>If a service hasn’t started, you can request a full refund by email. Once feedback is delivered, refunds are handled case by case.</p></details>
+<details><summary>How do I stand out in committee?</summary><p>Speak with evidence, listen to others, build blocs and propose realistic solutions rather than just making speeches.</p></details>
+</div></section>
+
+<section class="cta"><div class="wrap"><h2>Know a delegate who needs this?</h2><p class="lead" style="margin:0 auto 24px">Share Gavelume with your team, club or school group.</p><button class="btn" id="shr">Share on WhatsApp</button></div></section>
+<div class="tabbar" role="navigation" aria-label="App navigation"><a href="#top">🏠<span>Home</span></a><a href="#tools">⏱️<span>Tools</span></a><a href="#guides">📖<span>Guides</span></a><a href="#guides" data-tab="p5">⚖️<span>Rules</span></a><a href="#pricing">💳<span>Services</span></a><a href="#ai">✨<span>AI</span></a></div>
+<footer><div class="wrap">Gavelume · Built for delegates, by delegates. © 2026</div></footer>
+
+<script>
+const $=id=>document.getElementById(id);
+let total=60,left=60,iv=null;
+function draw(){const m=String(Math.floor(left/60)).padStart(2,'0'),s=String(left%60).padStart(2,'0');$('clk').textContent=m+':'+s;$('clk').classList.toggle('low',left<=10&&left>0)}
+function stop(){clearInterval(iv);iv=null}
+$('set').onclick=()=>{stop();total=left=Math.min(1800,(+$('mins').value||0)*60+(+$('secs').value||0));draw()};
+$('go').onclick=()=>{if(iv||left<=0)return;iv=setInterval(()=>{left--;draw();if(left<=0)stop()},1000)};
+$('pause').onclick=stop;
+$('reset').onclick=()=>{stop();left=total;draw()};
+const sp=[];
+function rl(){const l=$('spl');l.innerHTML='';sp.forEach((c,i)=>{const li=document.createElement('li');const t=document.createElement('span');t.textContent=c;const b=document.createElement('button');b.textContent='✕';b.setAttribute('aria-label','Remove '+c);b.onclick=()=>{sp.splice(i,1);rl()};li.append(t,b);l.append(li)});$('spe').style.display=sp.length?'none':'block'}
+function addS(){const v=$('sp').value.trim();if(v){sp.push(v);$('sp').value='';rl()}}
+$('add').onclick=addS;$('sp').onkeydown=e=>{if(e.key==='Enter')addS()};
+$('calc').onclick=()=>{const y=+$('y').value||0,n=+$('n').value||0,a=+$('a').value||0,p=y+n,t=p+a;
+if(!t){$('out').textContent='Enter votes to see the result.';return}
+$('out').innerHTML='Present and voting: '+p+' · Total present: '+t+'<br>Simple majority (more than half of those voting): '+(y>p/2?'Passes':'Fails')+'<br>Two-thirds majority: '+(p>0&&y>=Math.ceil(p*2/3)?'Passes':'Fails')+'<br>Majority of all present: '+(y>t/2?'Passes':'Fails')};
+document.querySelectorAll('.tab[data-p]').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab[data-p],.pane').forEach(e=>e.classList.remove('on'));b.classList.add('on');$(b.dataset.p).classList.add('on')});
+const PAY={quick:'',paper:'',bundle:'',poi:'',resolution:'',brief:'',full:'',aim:'',aiy:''}; // paste your payment-link URLs here (e.g. Razorpay or Stripe)
+const SV={quick:['Quick Speech Check',99],paper:['Position Paper Review',499],bundle:['Speech + Paper Bundle',549],poi:['Rebuttal & POI Pack',199],resolution:['Resolution Review',299],brief:['Country Research Brief',399],full:['Full Prep Package',1199],aim:['AI Monthly Plan',199],aiy:['AI Yearly Plan',1499]};
+let disc=0;const fmt=n=>'₹'+n.toLocaleString('en-IN');
+function render(){const p=SV[cur][1],t=Math.round(p*(1-disc));$('sp2').innerHTML=disc?'<s style="color:var(--mute);font-weight:400">'+fmt(p)+'</s> '+fmt(t):fmt(p)}
+let cur=null;const dlg=$('dlg');
+document.querySelectorAll('.buy').forEach(b=>b.onclick=()=>{cur=b.dataset.s;$('sn').textContent=SV[cur][0];disc=0;$('pc').value='';render();$('pm').textContent='';dlg.showModal()});
+const UPI={id:'9880129337@fam',name:'',contact:''}; // add your UPI ID, payee name and support email or WhatsApp here
+if(UPI.id){$('upibox').hidden=false;$('upiid').textContent=UPI.id;$('upin').textContent=UPI.name?'('+UPI.name+')':''}
+if(UPI.contact){$('sup').hidden=false;$('sup').textContent='Questions about a payment? Contact '+UPI.contact}
+$('cpy').onclick=()=>{try{navigator.clipboard.writeText(UPI.id);$('cpy').textContent='Copied'}catch(e){}};
+const QZ=[{q:'It’s the night before committee. What are you doing?',o:['Practising my speech out loud','Polishing my paper and clauses','Digging through voting records','Drafting tough questions for rivals']},{q:'Which compliment would you love most?',o:['“Great speech!”','“Brilliant resolution!”','“You know your facts cold!”','“Amazing question!”']},{q:'What worries you most?',o:['Freezing when I speak','Weak writing','Missing key facts','Being out-argued']}];
+const RS=[{t:'The Orator',d:'You win rooms with your voice. Sharpen your hook and timing with a Quick Speech Check ('+fmt(SV.quick[1])+').'},{t:'The Drafter',d:'You shape outcomes on paper. Get a Position Paper Review ('+fmt(SV.paper[1])+') or a Resolution Review ('+fmt(SV.resolution[1])+').'},{t:'The Strategist',d:'You win on facts. A Country Research Brief ('+fmt(SV.brief[1])+') gives you sources, allies and past votes.'},{t:'The Debater',d:'You thrive in the cross-fire. The Rebuttal & POI Pack ('+fmt(SV.poi[1])+') arms you with answers.'}];
+let qi=0,sc=[0,0,0,0];
+function qshow(){const b=$('qz');
+if(qi>=QZ.length){const r=RS[sc.indexOf(Math.max(...sc))];
+b.innerHTML='<div class="qr"><div class="eyebrow">Your result</div><h3>'+r.t+'</h3><p style="color:var(--mute)">'+r.d+'</p><div class="row"><a class="btn" href="#pricing">See my service</a><button class="btn ghost" id="qs">Share my result</button><button class="btn ghost" id="qa">Retake</button></div></div>';
+$('qs').onclick=()=>window.open('https://wa.me/?text='+encodeURIComponent('I’m '+r.t+' on Gavelume! Find your delegate style: '+location.href),'_blank','noopener');
+$('qa').onclick=()=>{qi=0;sc=[0,0,0,0];qshow()};return}
+const q=QZ[qi];
+b.innerHTML='<div class="qp"><i style="width:'+(qi/QZ.length*100)+'%"></i></div><div class="qq">'+q.q+'</div><div class="opts">'+q.o.map((t,i)=>'<button class="opt" data-i="'+i+'">'+t+'</button>').join('')+'</div>';
+b.querySelectorAll('.opt').forEach(x=>x.onclick=()=>{sc[+x.dataset.i]++;qi++;qshow()})}
+qshow();
+$('shr').onclick=()=>window.open('https://wa.me/?text='+encodeURIComponent('Prepping for Model UN? Check out Gavelume: free tools, guides and quick expert feedback. '+location.href),'_blank','noopener');
+(function(){const r=document.documentElement;let m=null;try{m=localStorage.getItem('dc-theme')}catch(e){}
+function ap(t){r.setAttribute('data-theme',t);$('tg').textContent=t==='dark'?'☀️':'🌙';const mt=document.querySelector('meta[name=theme-color]');if(mt)mt.content=t==='dark'?'#0c1726':'#4a9eea'}
+ap(m==='dark'?'dark':'light');
+$('tg').onclick=()=>{const n=r.getAttribute('data-theme')==='dark'?'light':'dark';ap(n);try{localStorage.setItem('dc-theme',n)}catch(e){}}})();
+$('cx').onclick=()=>dlg.close();
+$('ap').onclick=()=>{const c=$('pc').value.trim().toUpperCase();if(c==='STUDENT10'){disc=.1;$('pm').textContent='Student code applied: 10% off.'}else{disc=0;$('pm').textContent=c?'That code isn’t valid.':''}render()};
+$('par').onclick=()=>{const t=Math.round(SV[cur][1]*(1-disc));const m='Hi! I’d like to book “'+SV[cur][0]+'” on Gavelume for '+fmt(t)+'. Could you please pay for it? '+location.href;window.open('https://wa.me/?text='+encodeURIComponent(m),'_blank','noopener')};
+$('pay').onclick=()=>{const n=$('cn').value.trim(),e=$('ce').value.trim();
+if(!n||!/^\S+@\S+\.\S+$/.test(e)){$('pm').textContent='Please enter your name and a valid email.';return}
+if(!PAY[cur]){if(UPI.id){const t=Math.round(SV[cur][1]*(1-disc));const mob=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);$('pm').textContent=mob?'If your UPI app didn’t open, pay '+fmt(t)+' to '+UPI.id+' and keep the transaction ID to confirm your order.':'On a laptop, open any UPI app on your phone and pay '+fmt(t)+' to '+UPI.id+'. Keep the transaction ID to confirm your order.';if(!mob)return;location.href='upi://pay?pa='+encodeURIComponent(UPI.id)+'&pn='+encodeURIComponent(UPI.name||'Gavelume')+'&am='+t+'&cu=INR&tn='+encodeURIComponent(SV[cur][0]+' - '+n);return}$('pm').textContent='Checkout isn’t connected yet.';return}
+window.open(PAY[cur],'_blank','noopener');dlg.close()};
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.card,.step,details').forEach(el=>{el.classList.add('rv');io.observe(el)})}
+const RULES=[
+['Flow of debate','Roll call','Attendance is taken and each delegate answers so the chair knows who is in the room.','Present (you may abstain) or Present and voting (you must vote yes or no).','Say “Present” or “Present and voting”.'],
+['Flow of debate','Setting the agenda','Delegates vote on which topic the committee debates first when there is more than one.','Simple majority','“Motion to set the agenda to Topic A.”'],
+['Flow of debate','General Speakers’ List (GSL)','The default list of speeches on the agenda. Add your country early and keep your speech inside the time.','No vote needed','“Delegate of France, you have the floor for 90 seconds.”'],
+['Flow of debate','Yielding','After a speech you may yield your remaining time to another delegate, to points of information, or back to the chair.','No vote needed','“I yield my time to the chair.”'],
+['Flow of debate','Voting procedure','Once debate closes, the committee votes on amendments and then on the draft resolutions. Doors are closed and no one may enter or leave.','Per item','Chair: “We now move into voting procedure.”'],
+['Motions','Motion for a moderated caucus','Short timed speeches on a narrow sub-topic. State the topic, total time and time per speaker.','Simple majority','“Motion for a 10 minute moderated caucus on funding, 45 seconds per speaker.”'],
+['Motions','Motion for an unmoderated caucus','Free time to negotiate, find allies and write working papers or draft resolutions.','Simple majority','“Motion for a 15 minute unmoderated caucus.”'],
+['Motions','Motion to extend a caucus','Adds time to a caucus that is working. Usually allowed once and never longer than the original.','Simple majority','“Motion to extend the caucus by 5 minutes.”'],
+['Motions','Motion to introduce a document','Presents a working paper or draft resolution to the whole committee once it has enough sponsors and signatories.','Chair approval, then simple majority in some rules','“Motion to introduce Draft Resolution 1.1.”'],
+['Motions','Motion to close debate','Ends discussion on the current topic and moves the committee to voting. Often two speakers can speak against it first.','Two-thirds majority','“Motion to close debate and move to voting procedure.”'],
+['Motions','Motion to table or adjourn debate','Sets the topic aside for now, or ends the session for the day.','Two-thirds majority (table), simple majority (adjourn)','“Motion to adjourn the meeting until tomorrow.”'],
+['Motions','Motion to reconsider','Asks the committee to look again at a decision it already made. Only allowed in some rules.','Two-thirds majority','“Motion to reconsider Amendment 2.”'],
+['Points','Point of order','Raised when a rule of procedure appears to be broken. Cite which rule you believe was missed.','Chair rules on it','“Point of order. The motion was not seconded.”'],
+['Points','Point of information','A question to a speaker after their speech. Only possible if the speaker yielded to questions.','Speaker must have yielded','“Does the delegate agree that sanctions harm civilians?”'],
+['Points','Point of personal privilege','Raised when something stops you taking part, such as you cannot hear the speaker. It is the only point that can interrupt a speech.','Chair addresses it','“Point of personal privilege. Please speak louder.”'],
+['Points','Point of parliamentary inquiry','A question to the chair about the rules or what happens next. It cannot interrupt a speaker.','Chair answers','“Point of parliamentary inquiry. When does voting open?”'],
+['Points','Right of reply','Lets you respond when a remark questioned your country’s integrity. The chair decides if it is granted.','Chair grants','“Right of reply to the delegate of Brazil.”'],
+['Voting','Simple majority','More than half of the members who vote. Used for most procedural votes.','50% + 1','If 20 delegates vote, you need at least 11 yes votes.'],
+['Voting','Two-thirds majority','At least two-thirds of those voting. Used for weightier procedural motions.','About 67%','If 21 delegates vote, you need at least 14 yes votes.'],
+['Voting','Abstain','You choose not to vote yes or no. Abstentions usually do not count towards the total needed. Delegates who are Present and voting cannot abstain.','Allowed if Present','Say “Abstain”.'],
+['Voting','Roll call vote','Each country is called and answers yes, no, abstain or pass, one by one. Usually used for the final vote on a resolution.','Requested by a motion','“Motion for a roll call vote.”'],
+['Voting','Division of the question','Voting on clauses of a resolution separately so the committee can keep some and drop others.','Simple majority','“Motion to divide the question on clauses 3 and 4.”'],
+['Voting','Veto (Security Council)','Any of the five permanent members, the US, UK, France, Russia and China, can block a substantive resolution by voting no.','9 of 15 votes and no P5 veto','A single P5 “No” defeats the resolution.'],
+['Documents','Working paper','An early draft of ideas that does not need a set format and is not voted on.','No vote','Written during an unmoderated caucus.'],
+['Documents','Draft resolution','A formal document with preambulatory and operative clauses that the committee votes on.','Simple majority to pass','“Draft Resolution 1.1”'],
+['Documents','Sponsors and signatories','Sponsors wrote the draft and support it fully. Signatories only want to see it debated and are not bound to vote yes.','Set by your rules','Ask for a minimum number of signatories before introducing.'],
+['Documents','Amendments','Changes to a draft resolution. A friendly amendment is accepted by all sponsors, an unfriendly one is voted on.','Simple majority (unfriendly)','“Motion to introduce an unfriendly amendment.”']
+];
+const RC=['All',...new Set(RULES.map(r=>r[0]))];let rcat='All';
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function rrender(){const q=$('rq').value.trim().toLowerCase();
+const list=RULES.filter(r=>(rcat==='All'||r[0]===rcat)&&(!q||r.join(' ').toLowerCase().includes(q)));
+$('rg').innerHTML=list.length?list.map(r=>'<div class="ri"><span class="tag">'+esc(r[0])+'</span><h3>'+esc(r[1])+'</h3><p>'+esc(r[2])+'</p><p><b>Vote needed:</b> '+esc(r[3])+'</p><div class="ex"><b>Example:</b> '+esc(r[4])+'</div></div>').join(''):'<div class="rno">Nothing matches that search. Try another word.</div>';
+$('rc').textContent=list.length+' of '+RULES.length+' shown'}
+$('rtabs').innerHTML=RC.map(c=>'<button class="tab'+(c==='All'?' on':'')+'" data-c="'+c+'">'+c+'</button>').join('');
+$('rtabs').querySelectorAll('.tab').forEach(b=>b.onclick=()=>{rcat=b.dataset.c;$('rtabs').querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));rrender()});
+$('rq').oninput=rrender;rrender();
+/* ===== Feature detail dialog ===== */
+const FD={
+research:{t:'Research',i:'A repeatable method for understanding your country, your topic and what the UN has already done.',ai:'research',guide:'p1',
+steps:[['Understand the topic','Read the background guide fully. Define key terms and write the core disagreement in one sentence.'],['Study your country','Note its government, economy, alliances, history and interests as they relate to the agenda.'],['Trace past UN action','Find relevant resolutions, treaties and votes, and how your country voted or spoke.'],['Map the blocs','List likely allies, opponents and swing states, and what each wants.'],['Collect facts','Gather 5 to 8 statistics with sources, such as UN bodies, the World Bank or national data.'],['Record your sources','Keep every document and number in one file so you can cite it live in committee.']],
+bad:['Reading only the Wikipedia page for your country','Collecting facts with no source noted','Ignoring what your country has actually voted for in the past'],
+ck:['I can explain the topic in 2 sentences','I know my country’s top 3 interests','I have 5+ cited statistics','I know 3 allies and 3 opponents']},
+paper:{t:'Position papers',i:'A section-by-section structure with word budgets and the mistakes that cost delegates marks.',ai:'paper',guide:'p2',
+steps:[['Header','Committee, topic, country and delegate or school name.'],['Topic background (about 100 words)','Show you understand the issue and why it matters internationally.'],['Past actions by your country (about 150 words)','Cite treaties, votes and statements that show a consistent position.'],['Your country’s policy (about 150 words)','State what your country wants and the reasoning behind it.'],['Proposed solutions (about 150 words)','Offer specific, realistic actions the committee could adopt.'],['Proofread and cite','Keep to one page, write in third person for your country and check every fact.']],
+bad:['Going over one page','Writing as “I” instead of “The Republic of …”','Vague solutions such as “countries should cooperate”','Claims with no source'],
+ck:['Fits on one page','Each section has a clear purpose','Solutions are specific and realistic','Every statistic has a source'],
+tpl:'POSITION PAPER\nCommittee: [committee]   Country: [country]\nTopic: [topic]\n\n1. Background\n[Define the issue. One key statistic with source. Why it matters globally.]\n\n2. Past actions\n[Treaties signed, UN votes, national laws, statements by officials.]\n\n3. Country policy\n[What we want and why. Link to national interests and values.]\n\n4. Proposed solutions\n[2 to 3 specific actions, who does them and how they are funded.]'},
+speech:{t:'Speeches',i:'Frameworks for opening statements, GSL speeches and moderated caucus interventions.',ai:'speech',guide:'p3',
+steps:[['Hook (10 seconds)','Open with one striking fact or question that frames your position.'],['Position (20 seconds)','Say clearly what your country believes and why, in one or two sentences.'],['Proposal (40 seconds)','Name one concrete solution and invite others to collaborate.'],['Close (10 seconds)','End with a call to action. Always finish inside your time.'],['Moderated caucus tip','Respond to the speaker before you, then add one new point. Keep it under 45 seconds.'],['Practise with the timer','Say it out loud with the Gavelume timer until you finish with 5 seconds spare.']],
+bad:['Reading word for word without looking up','Using the whole time on background','Ending with “thank you” and no call to action'],
+ck:['Hook is under 15 words','One clear proposal','Finishes inside the time','Practised out loud twice']},
+resolution:{t:'Resolutions',i:'How to draft preambulatory and operative clauses that bring blocs together.',ai:'resolution',guide:'p4',
+steps:[['Heading and sponsors','Committee, topic, sponsors and signatories.'],['Preambulatory clauses','Set context with phrases such as “Recalling”, “Noting” and “Deeply concerned”. End each with a comma.'],['Operative clauses','Start with an action verb such as “Urges” or “Calls upon”. Number each clause and end it with a semicolon. The last clause ends with a full stop.'],['Build consensus','Combine ideas across blocs so the draft attracts signatories and votes.'],['Plan for amendments','Keep clauses short and separate so they survive division of the question.']],
+bad:['Long clauses that mix several actions','Operative clauses that do not start with a verb','No funding or implementation detail'],
+ck:['4 to 6 preambulatory clauses','6 to 10 operative clauses','Every clause is numbered and punctuated','Enough sponsors and signatories'],
+tpl:'Committee: [committee]\nTopic: [topic]\nSponsors: [countries]\n\nRecalling [earlier resolution or treaty],\nDeeply concerned by [the problem],\n\n1. Urges member states to [action];\n2. Calls upon [UN body] to [action];\n3. Requests [funding or reporting] by [date].'},
+rules:{t:'Rules of procedure',i:'Every common motion, point and voting threshold in one place. Always check your own conference rules.',ai:null,guide:'p5'},
+tools:{t:'Live tools',i:'A speaking timer, speakers list and voting calculator that work right here in your browser.',ai:null,guide:'#tools',
+steps:[['Speaking timer','Set minutes and seconds, then press Start. The clock turns red in the last 10 seconds.'],['Speakers list','Type a country and press Add. Remove a country with ✕ when it has spoken.'],['Voting calculator','Enter yes, no and abstain votes to see if a simple majority, two-thirds or majority of all present passes.']],
+bad:[],ck:[]}
+};
+const fd=$('fd');
+function openF(k){const f=FD[k];let h='<div class="eyebrow">Everything you need</div><h2>'+f.t+'</h2><p class="lead">'+f.i+'</p>';
+if(k==='rules'){h+='<div class="rg" style="margin-top:20px">'+RULES.map(r=>'<div class="ri"><span class="tag">'+esc(r[0])+'</span><h3>'+esc(r[1])+'</h3><p>'+esc(r[2])+'</p><p><b>Vote needed:</b> '+esc(r[3])+'</p><div class="ex"><b>Example:</b> '+esc(r[4])+'</div></div>').join('')+'</div><h3 class="sub">Voting thresholds at a glance</h3>'+document.querySelector('#p5 .tw').outerHTML}
+else{h+='<div class="steps">'+f.steps.map((s,i)=>'<div class="step"><b>'+(i+1)+'</b><div><h3>'+s[0]+'</h3><p>'+s[1]+'</p></div></div>').join('')+'</div>';
+if(f.tpl)h+='<h3 class="sub">Template</h3><pre class="tpl">'+esc(f.tpl)+'</pre>';
+if(f.bad.length)h+='<h3 class="sub">Common mistakes</h3><ul class="ck">'+f.bad.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+if(f.ck.length)h+='<h3 class="sub">Checklist</h3><ul class="ck">'+f.ck.map(x=>'<li>'+x+'</li>').join('')+'</ul>'}
+h+='<div class="row">'+(f.ai?'<button class="btn" id="fda">✨ Draft it with AI</button>':'')+'<a class="btn ghost" id="fdg" href="'+(f.guide[0]==='#'?f.guide:'#guides')+'">'+(f.guide[0]==='#'?'Open section':'Open full guide')+'</a></div>';
+$('fdb').innerHTML=h;fd.showModal();fd.scrollTop=0;
+if(f.ai)$('fda').onclick=()=>{fd.close();setAIType(f.ai);location.hash='#ai';$('aiq').focus()};
+$('fdg').onclick=()=>{fd.close();if(f.guide[0]!=='#'){const t=document.querySelector('.tab[data-p="'+f.guide+'"]');if(t)t.click()}}}
+document.querySelectorAll('a.fc[data-f]').forEach(a=>a.onclick=e=>{e.preventDefault();openF(a.dataset.f)});
+$('fdc').onclick=()=>fd.close();fd.addEventListener('click',e=>{if(e.target===fd)fd.close()});
+
+/* ===== AI Drafter ===== */
+// To use a real AI model, point AI.url at your own backend that accepts {prompt,type} and returns {text}. Never put an API key in this page.
+const AI={url:''};
+let aity='auto';
+function setAIType(t){aity=t;document.querySelectorAll('#aity .tab').forEach(b=>b.classList.toggle('on',b.dataset.t===t))}
+document.querySelectorAll('#aity .tab').forEach(b=>b.onclick=()=>setAIType(b.dataset.t));
+document.querySelectorAll('.exb').forEach(b=>b.onclick=()=>{$('aiq').value=b.textContent;$('aiq').focus()});
+function parseP(p){let type=aity;
+if(type==='auto'){type=/resolution|clause/i.test(p)?'resolution':/speech|opening|gsl|caucus/i.test(p)?'speech':/rebuttal|poi|point of information|question/i.test(p)?'poi':/research|brief|prepare|plan/i.test(p)?'research':'paper'}
+let cm=(p.match(/\b(UNSC|Security Council|UNGA|General Assembly|DISEC|ECOSOC|UNHRC|Human Rights Council|WHO|World Health Organization|UNEP|UNHCR|UNICEF|UNESCO|Crisis Committee|Lok Sabha|SOCHUM|SPECPOL|UNODC)\b/i)||[])[0]||'';
+let c=(p.match(/\b(?:for|as|representing|delegate of|delegate for)\s+(?:the\s+)?((?:[A-Z][\w’'-]*)(?:\s+(?:of\s+)?[A-Z][\w’'-]*){0,2})/)||[])[1]||'';
+if(/^(UN|The|A|An)$/i.test(c))c='';
+let t=(p.match(/\b(?:on|about|regarding|topic:?)\s+(.+?)(?:\s*(?:,|\.|;|\bat\b|\bin the\b|\bfor\b|\bas\b)\s*(?=[A-Z]|$)|[.,;]|$)/i)||[])[1]||'';
+if(cm&&t)t=t.replace(new RegExp('\\s*(,|at|in)?\\s*(the\\s+)?'+cm.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'.*$','i'),'');
+t=t.replace(/^(the\s+)?topic\s+/i,'').trim();
+return{type,c,t,cm}}
+function gen(p){const o=parseP(p),C=o.c||'[Your Country]',T=o.t||'[your topic]',M=o.cm||'[your committee]';
+const miss=(!o.c||!o.t)?'Tip: include your country and topic in the prompt, for example “for India on climate finance”, for a sharper draft.':'';
+const L={
+paper:'POSITION PAPER\nCommittee: '+M+'\nCountry: '+C+'\nTopic: '+T+'\n\n1. TOPIC BACKGROUND (about 100 words)\nThe issue of '+T+' has drawn growing attention from the international community. [Define the problem in one sentence and add one key statistic with its source.] [Name the main causes and who is most affected.] [Mention the main UN resolutions or treaties already addressing it.]\n\n2. PAST ACTIONS BY '+C.toUpperCase()+' (about 150 words)\n'+C+' has consistently [describe your country’s record]. [Cite one treaty, vote or national law related to '+T+'.] [Add a statement by an official or a program the country runs.]\n\n3. COUNTRY POLICY (about 150 words)\n'+C+' believes that '+T+' must be addressed through [your core principle, such as sovereignty, cooperation or development]. [Explain how this links to the country’s economy, security or values.] [Say what '+C+' will and will not support in '+M+'.]\n\n4. PROPOSED SOLUTIONS (about 150 words)\n'+C+' proposes that '+M+' (a) [specific action 1 with who is responsible], (b) [specific action 2 with how it is funded], and (c) [a way to monitor and report progress]. '+C+' invites like-minded delegations to co-sponsor.\n\nBEFORE YOU SUBMIT\n- Keep it to one page\n- Write in the third person (“'+C+' believes…”)\n- Add a source for every statistic',
+speech:'OPENING SPEECH (about 90 seconds, '+C+', '+M+')\n\nHOOK (10s)\n“[One striking fact or question about '+T+'.]”\n\nPOSITION (20s)\nHonourable Chair, distinguished delegates, '+C+' believes that '+T+' demands [your position in one clear sentence]. This matters because [one reason linked to your national interest].\n\nPROPOSAL (40s)\n'+C+' proposes [one concrete solution]. It would work because [evidence or past example]. We invite [bloc or countries] to work with us.\n\nCLOSE (10s)\nDelegates, [short call to action]. '+C+' stands ready to cooperate. Thank you, Chair.\n\nPRACTISE\nRead it aloud with the Gavelume timer and aim to finish with 5 seconds spare.',
+resolution:'DRAFT RESOLUTION\nCommittee: '+M+'\nTopic: '+T+'\nSponsors: '+C+', [other sponsors]\nSignatories: [signatories]\n\nThe '+M+',\n\nRecalling [a relevant UN Charter article or earlier resolution],\nDeeply concerned by the impact of '+T+' on [affected groups],\nNoting with satisfaction the efforts already made by [states or organisations],\nEmphasising the need for international cooperation on '+T+',\nReaffirming the sovereignty and territorial integrity of all member states,\n\n1. Urges all member states to [first action on '+T+'];\n2. Calls upon [UN body] to [second action];\n3. Encourages the creation of a [fund or task force] to support [goal];\n4. Requests the Secretary-General to submit a progress report on '+T+' by [date];\n5. Recommends voluntary contributions from [donors and regional bodies];\n6. Decides to remain actively seized of the matter.',
+poi:'REBUTTAL & POI PACK: '+T+' ('+C+')\n\nLIKELY QUESTIONS AND HOW TO ANSWER\n1. “How will '+C+' fund its proposal on '+T+'?”\n   Answer: name the source (voluntary funds, existing UN budgets), then the scale.\n2. “Does '+C+' not already contribute to the problem?”\n   Answer: acknowledge briefly, then point to progress and a concrete plan.\n3. “How does this respect national sovereignty?”\n   Answer: stress that it is voluntary and member-led.\n4. “What evidence shows this works?”\n   Answer: give one case study with a source.\n5. “Why should the committee act now?”\n   Answer: use one statistic that shows urgency.\n6. “Who will enforce it?”\n   Answer: explain monitoring and reporting, not force.\n7. “How does this differ from earlier resolutions?”\n   Answer: name one gap in the old text and how yours fills it.\n8. “What will '+C+' give up to reach a compromise?”\n   Answer: name one flexible clause and one red line.\n9. “Which countries support '+C+'?”\n   Answer: name two allies and what they gain.\n10. “What if the proposal fails?”\n   Answer: offer a fallback such as a pilot programme.\n\nREBUTTAL FRAME\n“I thank the delegate for the point. While [their claim], the evidence shows [your fact], and '+C+' therefore [your proposal].”',
+research:'7-DAY RESEARCH PLAN: '+T+' ('+C+', '+M+')\n\nDay 1: Read the background guide. Write the core disagreement on '+T+' in one sentence.\nDay 2: Study '+C+': government, economy, alliances and interests linked to '+T+'.\nDay 3: Find UN resolutions and treaties on '+T+' and how '+C+' voted.\nDay 4: Map blocs. List 3 allies, 3 opponents and 3 swing states, and what each wants.\nDay 5: Collect 5 to 8 statistics with sources, from UN bodies, the World Bank or national data.\nDay 6: Write your position paper and an opening speech.\nDay 7: Practise your speech with the timer, then draft 2 resolution clauses.\n\nSOURCES TO START WITH\n- UN Digital Library and your committee’s background guide\n- Your country’s foreign ministry and its UN mission statements\n- UN voting records for '+C+'\n- Relevant UN agency reports on '+T+'\n\nKEEP A SOURCE LOG\nFor every fact, record: the number, where it came from, the date and a link.'};
+return{text:L[o.type],tag:miss,type:o.type}}
+let aiText='';
+$('aig').onclick=async()=>{const p=$('aiq').value.trim();if(!p){$('ait').hidden=false;$('ait').textContent='Type what you need first, for example “Position paper for India on climate finance”.';return}
+if(aiLeft()<=0){aiGate();return}
+const out=$('aio');out.hidden=false;out.textContent='Drafting…';$('ait').hidden=true;
+let r;
+if(AI.url){try{const x=await fetch(AI.url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:p,type:aity})});const d=await x.json();r={text:d.text,tag:''}}catch(e){r=gen(p);r.tag='The AI service could not be reached, so a built-in draft is shown.'}}
+else r=gen(p);
+aiText=r.text;out.textContent=aiText;aiUse();$('aic').hidden=false;$('aid').hidden=false;
+$('ait').hidden=false;$('ait').textContent=(r.tag?r.tag+' ':'')+'This is a first draft to edit. Replace the [brackets] with your own researched facts and sources. '+aiText.split(/\s+/).length+' words.'};
+$('aiq').onkeydown=e=>{if((e.ctrlKey||e.metaKey)&&e.key==='Enter')$('aig').click()};
+$('aic').onclick=()=>{try{navigator.clipboard.writeText(aiText);$('aic').textContent='Copied';setTimeout(()=>$('aic').textContent='Copy',1500)}catch(e){}};
+$('aid').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([aiText],{type:'text/plain'}));a.download='gavelume-draft.txt';a.click();URL.revokeObjectURL(a.href)};
+/* ===== Real committee membership (as of November 2026) ===== */
+const UN=['Afghanistan','Albania','Algeria','Andorra','Angola','Antigua and Barbuda','Argentina','Armenia','Australia','Austria','Azerbaijan','Bahamas','Bahrain','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bhutan','Bolivia','Bosnia and Herzegovina','Botswana','Brazil','Brunei','Bulgaria','Burkina Faso','Burundi','Cabo Verde','Cambodia','Cameroon','Canada','Central African Republic','Chad','Chile','China','Colombia','Comoros','Congo','Costa Rica','Côte d’Ivoire','Croatia','Cuba','Cyprus','Czechia','DR Congo','Denmark','Djibouti','Dominica','Dominican Republic','Ecuador','Egypt','El Salvador','Equatorial Guinea','Eritrea','Estonia','Eswatini','Ethiopia','Fiji','Finland','France','Gabon','Gambia','Georgia','Germany','Ghana','Greece','Grenada','Guatemala','Guinea','Guinea-Bissau','Guyana','Haiti','Honduras','Hungary','Iceland','India','Indonesia','Iran','Iraq','Ireland','Israel','Italy','Jamaica','Japan','Jordan','Kazakhstan','Kenya','Kiribati','Kuwait','Kyrgyzstan','Laos','Latvia','Lebanon','Lesotho','Liberia','Libya','Liechtenstein','Lithuania','Luxembourg','Madagascar','Malawi','Malaysia','Maldives','Mali','Malta','Marshall Islands','Mauritania','Mauritius','Mexico','Micronesia','Moldova','Monaco','Mongolia','Montenegro','Morocco','Mozambique','Myanmar','Namibia','Nauru','Nepal','Netherlands','New Zealand','Nicaragua','Niger','Nigeria','North Korea','North Macedonia','Norway','Oman','Pakistan','Palau','Panama','Papua New Guinea','Paraguay','Peru','Philippines','Poland','Portugal','Qatar','Romania','Russia','Rwanda','Saint Kitts and Nevis','Saint Lucia','Saint Vincent and the Grenadines','Samoa','San Marino','São Tomé and Príncipe','Saudi Arabia','Senegal','Serbia','Seychelles','Sierra Leone','Singapore','Slovakia','Slovenia','Solomon Islands','Somalia','South Africa','South Korea','South Sudan','Spain','Sri Lanka','Sudan','Suriname','Sweden','Switzerland','Syria','Tajikistan','Tanzania','Thailand','Timor-Leste','Togo','Tonga','Trinidad and Tobago','Tunisia','Türkiye','Turkmenistan','Tuvalu','Uganda','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Uzbekistan','Vanuatu','Venezuela','Vietnam','Yemen','Zambia','Zimbabwe'];
+const P5=['China','France','Russia','United Kingdom','United States'];
+const CM={
+unsc26:{n:'UN Security Council (2026)',N:15,g:[['Permanent members (veto power)',P5],['Elected, term ends 2026',['Denmark','Greece','Pakistan','Panama','Somalia']],['Elected, term ends 2027',['Bahrain','Colombia','DR Congo','Latvia','Liberia']]],f:{'China':'P5','France':'P5','Russia':'P5','United Kingdom':'P5','United States':'P5'},i:'15 members. Resolutions need 9 votes and no veto from a permanent member.'},
+unsc27:{n:'UN Security Council (2027, incoming)',N:15,g:[['Permanent members (veto power)',P5],['Elected, term ends 2027',['Bahrain','Colombia','DR Congo','Latvia','Liberia']],['Newly elected, term ends 2028',['Austria','Kyrgyzstan','Portugal','Trinidad and Tobago','Zimbabwe']]],f:{'China':'P5','France':'P5','Russia':'P5','United Kingdom':'P5','United States':'P5'},i:'Elected by the General Assembly in June 2026. Terms begin on 1 January 2027.'},
+hrc:{n:'Human Rights Council (2026)',N:47,g:[['African States',['Angola','Benin','Burundi','Côte d’Ivoire','DR Congo','Egypt','Ethiopia','Gambia','Ghana','Kenya','Malawi','Mauritius','South Africa']],['Asia-Pacific States',['China','Cyprus','India','Indonesia','Iraq','Japan','Kuwait','Marshall Islands','Pakistan','Qatar','South Korea','Thailand','Vietnam']],['Eastern European States',['Albania','Bulgaria','Czechia','Estonia','North Macedonia','Slovenia']],['Latin American and Caribbean States',['Bolivia','Brazil','Chile','Colombia','Cuba','Dominican Republic','Ecuador','Mexico']],['Western European and other States',['France','Iceland','Italy','Netherlands','Spain','Switzerland','United Kingdom']]],i:'47 members elected for three-year terms. Seats for 2027 were decided in the October 2026 election.'},
+ecosoc:{n:'ECOSOC (2026)',N:54,g:[['African States',['Algeria','Burundi','Chad','Côte d’Ivoire','Djibouti','Kenya','Mauritania','Mozambique','Nigeria','Senegal','Sierra Leone','South Africa','Tanzania','Zambia']],['Asia-Pacific States',['Bangladesh','China','India','Japan','Lebanon','Nepal','Pakistan','Saudi Arabia','Sri Lanka','Turkmenistan','Uzbekistan']],['Eastern European States',['Armenia','Azerbaijan','Croatia','Poland','Russia','Ukraine']],['Latin American and Caribbean States',['Antigua and Barbuda','Dominican Republic','Ecuador','Haiti','Mexico','Paraguay','Peru','Saint Kitts and Nevis','Suriname','Uruguay']],['Western European and other States',['Australia','Austria','Canada','Finland','France','Germany','Netherlands','Norway','Spain','Switzerland','Türkiye','United Kingdom','United States']]],i:'54 members elected for three-year terms, 18 new members each year.'},
+ga:{n:'General Assembly (UNGA)',N:193,g:[['All UN member states',UN]],i:'Every one of the 193 UN member states has one vote.'},
+disec:{n:'DISEC (First Committee)',N:193,g:[['All UN member states',UN]],i:'DISEC is the General Assembly’s First Committee, so all 193 member states can take part.'},
+unep:{n:'UNEP (UN Environment Assembly)',N:193,g:[['All UN member states',UN]],i:'The UN Environment Assembly has universal membership: all 193 UN member states.'},
+who:{n:'WHO (World Health Assembly)',N:194,g:[['Member states and non-UN members',UN.filter(x=>x!=='Liechtenstein').concat(['Cook Islands','Niue']).sort((a,b)=>a.localeCompare(b))]],f:{'United States':'left 2026','Argentina':'left 2026'},i:'WHO lists 194 member states. It includes Cook Islands and Niue, but not Liechtenstein. The US and Argentina completed withdrawal in 2026.'}
+};
+const CALL=[...new Set(UN.concat(['Cook Islands','Niue','Palestine','Holy See']))].sort((a,b)=>a.localeCompare(b));let cmOpen=false;
+const dl=document.createElement('datalist');dl.id='cl';dl.innerHTML=CALL.map(x=>'<option value="'+x+'">').join('');document.body.append(dl);$('sp').setAttribute('list','cl');
+const cmSel=$('cm');cmSel.innerHTML=Object.keys(CM).map(k=>'<option value="'+k+'">'+CM[k].n+'</option>').join('')+'<option disabled>Crisis, historical and custom committees have no fixed real list</option>';
+function cmRender(){const c=CM[cmSel.value],q=$('cmq').value.trim().toLowerCase();let h='';
+c.g.forEach(g=>{const m=g[1].filter(x=>!q||x.toLowerCase().includes(q));if(m.length)h+='<h4 class="cg">'+g[0]+' <span>('+m.length+(q?' shown':'')+')</span></h4><div class="chips">'+m.map(x=>'<button class="chip'+(sp.includes(x)?' on':'')+'" data-c="'+x+'">'+x+(c.f&&c.f[x]?'<i>'+c.f[x]+'</i>':'')+'</button>').join('')+'</div>'});
+const ms=new Set(c.g.flatMap(g=>g[1])),ot=CALL.filter(x=>!ms.has(x)&&(!q||x.toLowerCase().includes(q)));
+if(ot.length)h+='<details class="cgo"'+((q||cmOpen)?' open':'')+'><summary>Add other countries ('+ot.length+')</summary><p class="cmn" style="margin:8px 0 12px">These aren’t members of this committee in real life, but you can still add them to your live committee.</p><div class="chips">'+ot.map(x=>'<button class="chip out'+(sp.includes(x)?' on':'')+'" data-c="'+x+'">'+x+'</button>').join('')+'</div></details>';
+$('cml').innerHTML=h||'<p class="cmn">No country matches that search.</p>';
+const gd=$('cml').querySelector('.cgo');if(gd)gd.ontoggle=()=>{cmOpen=gd.open};
+const maj=Math.floor(c.N/2)+1,two=Math.ceil(c.N*2/3);
+$('cmi').textContent=c.n+': '+c.N+' members. '+c.i+' Simple majority of all members: '+maj+'. Two-thirds: '+two+'.';
+$('cml').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{const v=b.dataset.c,i=sp.indexOf(v);if(i<0)sp.push(v);else sp.splice(i,1);b.classList.toggle('on',i<0);rl()})}
+cmSel.onchange=cmRender;$('cmq').oninput=cmRender;
+$('cma').onclick=()=>{CM[cmSel.value].g.forEach(g=>g[1].forEach(x=>{if(!sp.includes(x))sp.push(x)}));rl();cmRender()};
+$('cmx').onclick=()=>{sp.length=0;rl();cmRender()};
+$('cmn').textContent='Membership shown as of November 2026, from UN General Assembly and WHO records. Committees change as elections happen, so check your conference’s own country list.';
+cmRender();
+/* ===== AI usage limit: 10 free messages, then a monthly or yearly plan with 400 messages a month ===== */
+// Limits are set here. Unlock codes are stored as hashes, so they are not readable in the page source.
+const AIL={free:10,per:400,k:'gv-ai-usage',D:86400000};
+const AIHM=["1e7oh0n1org", "1hranxex3pk", "9dakymwz3v", "2157482xgsf", "z33gmnve51", "96lly27wuj", "vq0u9x9p1n", "f9tqa638ng", "1338q6psf7u", "tinpyq1b0f"],AIHY=["1nkei2oky0l", "h5hlndanad", "y1pon4eamy", "21k64m4bp8y", "7qh99ptn2z"];
+const h53=(str,seed=0)=>{let h1=0xdeadbeef^seed,h2=0x41c6ce57^seed;for(let i=0,ch;i<str.length;i++){ch=str.charCodeAt(i);h1=Math.imul(h1^ch,2654435761);h2=Math.imul(h2^ch,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return 4294967296*(2097151&h2)+(h1>>>0)};
+let aiS={used:0,plan:null,red:[]};
+try{const v=JSON.parse(localStorage.getItem(AIL.k)||'null');if(v&&typeof v==='object')aiS=Object.assign(aiS,v)}catch(e){}
+function aiSave(){try{localStorage.setItem(AIL.k,JSON.stringify(aiS))}catch(e){}}
+function aiPlan(){const p=aiS.plan,n=Date.now();if(!p)return null;if(n>=p.end){aiS.plan=null;aiSave();return null}while(n>=p.ps+30*AIL.D){p.ps+=30*AIL.D;p.pu=0}return p}
+function aiLeft(){const p=aiPlan();return p?Math.max(0,AIL.per-p.pu):Math.max(0,AIL.free-aiS.used)}
+const fdt=t=>new Date(t).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});
+function aiShow(){const p=aiPlan(),l=aiLeft();
+$('aicnt').textContent=p?l+' of '+AIL.per+' AI messages left this month · plan active until '+fdt(p.end):(l>0?l+' of '+AIL.free+' free AI messages left':'No free AI messages left');
+$('aipw').hidden=l>0;
+if(l<=0){if(p){$('aiwh').textContent='You’ve used your '+AIL.per+' messages for this month';$('aiwp').textContent='Your allowance resets on '+fdt(Math.min(p.ps+30*AIL.D,p.end))+'. You can also add more time with a new unlock code.'}else{$('aiwh').textContent='You’ve used your '+AIL.free+' free AI messages';$('aiwp').textContent='Get a plan for '+AIL.per+' AI messages every month. After you pay, you’ll receive an unlock code. Already have one? Enter it below.'}$('aiwb').hidden=!!p}}
+function aiUse(){const p=aiPlan();if(p)p.pu++;else aiS.used++;aiSave();aiShow()}
+function aiGate(){$('aipw').hidden=false;$('aipw').scrollIntoView({behavior:'smooth',block:'center'})}
+$('aibuy').onclick=()=>document.querySelector('.buy[data-s="aim"]').click();
+$('aibuy2').onclick=()=>document.querySelector('.buy[data-s="aiy"]').click();
+$('aiun').onclick=()=>{const c=$('aicode').value.trim().toUpperCase(),m=$('aium');if(!c){m.textContent='Enter your unlock code.';return}
+const h=h53(c).toString(36),t=AIHM.includes(h)?30:AIHY.includes(h)?365:0;
+if(!t){m.textContent='That code isn’t valid. Check it and try again.';return}
+if(aiS.red.includes(h)){m.textContent='This code has already been used on this device.';return}
+aiS.red.push(h);const p=aiPlan();if(p)p.end+=t*AIL.D;else aiS.plan={end:Date.now()+t*AIL.D,ps:Date.now(),pu:0};
+aiSave();$('aicode').value='';m.textContent='Unlocked. Your '+(t===30?'monthly':'yearly')+' plan is active until '+fdt(aiS.plan.end)+'.';aiShow()};
+document.querySelectorAll('a[data-tab]').forEach(a=>a.addEventListener('click',()=>{const t=document.querySelector('.tab[data-p="'+a.dataset.tab+'"]');if(t)t.click()}));
+aiShow();
+rl();draw();
+</script>
+</body>
+</html>
